@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swiperRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdge="none"
+            android:scrollbars="none">
+
+            <com.hqbb.duanzi.widget.LoadMoreListView
+                android:id="@+id/loadMorelistView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/ListView"
+                android:divider="@mipmap/common_dividing_line"
+                android:dividerHeight="0.5dp">
+
+            </com.hqbb.duanzi.widget.LoadMoreListView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <Button
+            android:id="@+id/back_top"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@mipmap/top"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

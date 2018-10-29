@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hqbb.duanzi.activity.ScanLocalBookActivity">
+
+    <include layout="@layout/common_toolbar" />
+
+    <com.hqbb.duanzi.widget.recyclerview.EasyRecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_empty="@layout/common_empty_view"
+        app:layout_progress="@layout/common_progress_view"
+        app:scrollbarStyle="insideOverlay" />
+
+</LinearLayout>

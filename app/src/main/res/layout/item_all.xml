@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <ImageView
+            android:id="@+id/item_avator"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/default_avator"
+            />
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/item_avator"
+            android:layout_toLeftOf="@+id/item_time"
+            android:text="wukong"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="12sp"
+            android:textColor="@color/text_gray"
+            android:text="2018-1-8 17:30:00"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="8dp"
+        android:layout_marginLeft="48dp"
+        android:textColor="@color/text_color"
+        android:textSize="15sp"
+        android:text="Hello World"/>
+
+    <ImageView
+        android:id="@+id/item_pic"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginRight="16dp"
+        android:paddingBottom="8dp"
+        android:src="@mipmap/default_avator"
+        android:visibility="gone"
+        />
+
+    <cn.jzvd.JZVideoPlayerStandard
+        android:id="@+id/videoPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        >
+
+    </cn.jzvd.JZVideoPlayerStandard>
+
+
+</LinearLayout>

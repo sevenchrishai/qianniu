@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hqbb.duanzi">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name=".base.AppApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeWelcome">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PictureActivity"
+            android:theme="@style/ThemeWelcome" />
+        <activity android:name=".activity.DuanziActivity" />
+        <activity android:name=".activity.NewsActivity" />
+        <activity android:name=".activity.NewsDetailActivity" />
+        <activity android:name=".activity.GankActivity" />
+        <activity
+            android:name=".activity.ReadActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeWelcome">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".service.DownloadBookService" />
+
+        <activity android:name=".activity.ZhuishuActivity" />
+        <activity android:name=".activity.TopRankActivity" />
+        <activity android:name=".activity.SubOtherHomeRankActivity" />
+        <activity android:name=".activity.SubRankActivity" />
+        <activity android:name=".activity.BookDetailActivity" />
+        <activity android:name=".activity.BooksByTagActivity" />
+        <activity android:name=".activity.BookDiscussionDetailActivity" />
+        <activity android:name=".activity.SubjectBookListDetailActivity" />
+        <activity android:name=".activity.BookDetailCommunityActivity" />
+        <activity android:name=".activity.BookReviewDetailActivity" />
+        <activity android:name=".activity.SearchByAuthorActivity" />
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".activity.TopCategoryListActivity" />
+        <activity android:name=".activity.SubCategoryListActivity" />
+        <activity android:name=".activity.SubjectBookListActivity" />
+        <activity android:name=".activity.BookSourceActivity" />
+        <activity android:name=".activity.BookSettingActivity" />
+        <activity android:name=".activity.ScanLocalBookActivity" />
+        <activity android:name=".activity.WifiBookActivity"></activity>
+    </application>
+
+</manifest>
